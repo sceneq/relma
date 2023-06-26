@@ -44,7 +44,7 @@ func IsArchiveFile(path string) (bool, error) {
 		return false, err
 	}
 	switch typ.Extension {
-	case "gz", "zip":
+	case "gz", "zip", "xz", "bz2", "lz4", "zstd", "sz", "br", "rar":
 		return true, nil
 	}
 
